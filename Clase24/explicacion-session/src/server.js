@@ -21,6 +21,7 @@ app.use(session({
 
 
 app.get("/login",(req,res) => {
+    // console.log(req.session)
     const {nombre} = req.query;
     if(req.session.username){
         res.redirect("/perfil")
