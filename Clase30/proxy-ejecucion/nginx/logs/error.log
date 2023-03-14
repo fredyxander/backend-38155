@@ -1,0 +1,1 @@
+2023/03/13 19:55:42 [error] 21544#24132: *14 CreateFile() "E:\Coderhouse\Comisiones Backend-Nodejs\Backend-38155\Clases\Clase30\proxy-ejecucion\nginx/html/hola" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /hola HTTP/1.1", host: "localhost:81"
