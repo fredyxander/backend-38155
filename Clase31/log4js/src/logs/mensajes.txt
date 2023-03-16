@@ -1,0 +1,3 @@
+[2023-03-15T19:50:00.118] [WARN] default - imprimiendo mensaje con nivel warn
+[2023-03-15T19:50:00.118] [ERROR] default - imprimiendo mensaje con nivel error
+[2023-03-15T19:50:00.119] [FATAL] default - imprimiendo mensaje con nivel fatal
