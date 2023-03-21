@@ -1,0 +1,66 @@
+Statistical profiling result from isolate-bloq.log, (244359 ticks, 1 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  221455   90.6%          C:\WINDOWS\SYSTEM32\ntdll.dll
+  22880    9.4%          C:\Program Files\nodejs\node.exe
+      2    0.0%          C:\WINDOWS\system32\mswsock.dll
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      3    0.0%   13.6%  LazyCompile: *resolve node:path:158:10
+      3    0.0%   13.6%  Function: ^<anonymous> E:\Coderhouse\Comisiones Backend-Nodejs\Backend-38155\Clases\Clase32\profilling\src\server.js:40:23
+      1    0.0%    4.5%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      1    0.0%    4.5%  RegExp: ; *([!#$%&'*+.^_`|~0-9A-Za-z-]+) *= *("(?:[\u000b\u0020\u0021\u0023-\u005b\u005d-\u007e\u0080-\u00ff]|\\[\u000b\u0020-\u00ff])*"|[!#$%&'*+.^_`|~0-9A-Za-z-]+) *
+      1    0.0%    4.5%  LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    0.0%    4.5%  LazyCompile: *normalizeString node:path:66:25
+      1    0.0%    4.5%  Function: ^parseQueryStringValues E:\Coderhouse\Comisiones Backend-Nodejs\Backend-38155\Clases\Clase32\profilling\node_modules\qs\lib\parse.js:51:50
+      1    0.0%    4.5%  Function: ^merge E:\Coderhouse\Comisiones Backend-Nodejs\Backend-38155\Clases\Clase32\profilling\node_modules\qs\lib\utils.js:47:27
+      1    0.0%    4.5%  Function: ^handle E:\Coderhouse\Comisiones Backend-Nodejs\Backend-38155\Clases\Clase32\profilling\node_modules\express\lib\router\index.js:136:31
+      1    0.0%    4.5%  Function: ^getDefaultTriggerAsyncId node:internal/async_hooks:431:34
+      1    0.0%    4.5%  Function: ^get node:internal/bootstrap/pre_execution:315:8
+      1    0.0%    4.5%  Function: ^fromArrayBuffer node:buffer:448:25
+      1    0.0%    4.5%  Function: ^callback node:internal/streams/writable:550:44
+      1    0.0%    4.5%  Function: ^Socket._writev node:net:801:36
+      1    0.0%    4.5%  Function: ^Readable.read node:internal/streams/readable:394:35
+      1    0.0%    4.5%  Function: ^Module._nodeModulePaths node:internal/modules/cjs/loader:583:37
+      1    0.0%    4.5%  Function: ^EventEmitter.init node:events:194:29
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+     21    0.0%   95.5%  JavaScript
+      0    0.0%    0.0%  C++
+     42    0.0%  190.9%  GC
+  244337  100.0%          Shared libraries
+      1    0.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  221455   90.6%  C:\WINDOWS\SYSTEM32\ntdll.dll
+
+  22880    9.4%  C:\Program Files\nodejs\node.exe
+  22598   98.8%    C:\Program Files\nodejs\node.exe
+  21752   96.3%      Function: ^pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+  21644   99.5%        Function: ^<anonymous> E:\Coderhouse\Comisiones Backend-Nodejs\Backend-38155\Clases\Clase32\profilling\src\server.js:40:23
+  21644  100.0%          Function: ^handle E:\Coderhouse\Comisiones Backend-Nodejs\Backend-38155\Clases\Clase32\profilling\node_modules\express\lib\router\layer.js:86:49
+  21514   99.4%            Function: ^next E:\Coderhouse\Comisiones Backend-Nodejs\Backend-38155\Clases\Clase32\profilling\node_modules\express\lib\router\route.js:116:16
+    412    1.8%      LazyCompile: ~pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+    373   90.5%        LazyCompile: ~<anonymous> E:\Coderhouse\Comisiones Backend-Nodejs\Backend-38155\Clases\Clase32\profilling\src\server.js:40:23
+    328   87.9%          Function: ^handle E:\Coderhouse\Comisiones Backend-Nodejs\Backend-38155\Clases\Clase32\profilling\node_modules\express\lib\router\layer.js:86:49
+    328  100.0%            LazyCompile: ~next E:\Coderhouse\Comisiones Backend-Nodejs\Backend-38155\Clases\Clase32\profilling\node_modules\express\lib\router\route.js:116:16
+     45   12.1%          LazyCompile: ~handle E:\Coderhouse\Comisiones Backend-Nodejs\Backend-38155\Clases\Clase32\profilling\node_modules\express\lib\router\layer.js:86:49
+     45  100.0%            LazyCompile: ~next E:\Coderhouse\Comisiones Backend-Nodejs\Backend-38155\Clases\Clase32\profilling\node_modules\express\lib\router\route.js:116:16
+     39    9.5%        LazyCompile: ~<anonymous> E:\Coderhouse\Comisiones Backend-Nodejs\Backend-38155\Clases\Clase32\profilling\src\server.js:17:21
+     39  100.0%          LazyCompile: ~handle E:\Coderhouse\Comisiones Backend-Nodejs\Backend-38155\Clases\Clase32\profilling\node_modules\express\lib\router\layer.js:86:49
+     39  100.0%            LazyCompile: ~next E:\Coderhouse\Comisiones Backend-Nodejs\Backend-38155\Clases\Clase32\profilling\node_modules\express\lib\router\route.js:116:16
+

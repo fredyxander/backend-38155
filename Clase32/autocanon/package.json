@@ -1,0 +1,18 @@
+{
+  "name": "artillery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "0x src/server.js",
+    "create-user": "curl -X GET \"http://localhost:8080/newUser?username=pepe&password=1234\"",
+    "test": "npm run create-user && node benchmark.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autocannon": "^7.10.0",
+    "express": "^4.18.2"
+  }
+}
