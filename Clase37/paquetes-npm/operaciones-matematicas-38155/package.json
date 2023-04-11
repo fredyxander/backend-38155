@@ -1,0 +1,12 @@
+{
+  "name": "operaciones-matematicas-38155",
+  "version": "1.0.0",
+  "description": "modulo para realizar operaciones matematicas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["matematicas","coder"],
+  "author": "fredy chaparro",
+  "license": "ISC"
+}
