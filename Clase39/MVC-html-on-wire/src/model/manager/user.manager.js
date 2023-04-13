@@ -18,8 +18,8 @@ class UserManagerMongo{
 
     async getAll(){
         try {
-            const users = await this.model.find();
-            const data = JSON.parse(JSON.stringify(users));
+            const users = await this.model.find();//formato BSON
+            const data = JSON.parse(JSON.stringify(users));//formato json
             return data;
         } catch (error) {
             throw new Error("No se pudo obtener los usuarios");
