@@ -1,0 +1,16 @@
+<h1>Vista principal</h1>
+
+<form method="post" action="/api/users">
+    <input type="text" placeholder="nombre" name="name"/>
+    <br/>
+    <input type="text" placeholder="apellido" name="lastname"/>
+    <br/>
+    <input type="text" placeholder="dni" name="dni"/>
+    <br/>
+    <button>Crear usuario</button>
+</form>
+
+<h2>listado de usuarios</h2>
+{{#each users}}
+    <p>Nombre completo: {{this.name}} {{this.lastname}}</p>
+{{/each}}
