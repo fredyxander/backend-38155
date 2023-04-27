@@ -1,0 +1,24 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+<h2>Agregar producto</h2>
+
+<form method="post" action="/products">
+    <input type="text" placeholder="nombre del producto" name="title"/>
+    <br/><br/>
+    <input type="number" placeholder="precio del producto" name="price"/>
+    <br/><br/>
+    <button>Crear producto</button>
+</form>
+
+<hr>
+<h2>Lista de productos</h2>
+{{#if products}}
+    <ul>
+        {{#each products}}
+            <li>{{this.title}} - Precio: {{this.price}}</li>
+        {{/each}}
+    </ul>
+{{else}}
+    <p>no hay productos</p>
+{{/if}}

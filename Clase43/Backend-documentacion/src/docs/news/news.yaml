@@ -1,0 +1,116 @@
+paths:
+  /api/news/:
+    get:
+      summary: ruta para obtener todas las noticias
+      tags:
+        - Noticias
+      responses:
+        "200":
+          description: noticias obtenidas correctamente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#components/schemas/New"
+        "401":
+          description: Error por el usuario no esta autenticado
+        "500":
+          description: Error generado en el servidor
+    post:
+      summary: ruta para crear una noticia
+      tags:
+        - Noticias
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#components/requestBodies/objectNew"
+      responses:
+        "200":
+          description: noticia credaa correctamente
+          content:
+            application/json:
+              schema:
+                $ref: "#components/schemas/New"
+        "401":
+          description: Error por el usuario no esta autenticado
+        "500":
+          description: Error generado en el servidor
+  /api/news/{id}:
+    delete:
+      summary: ruta para eliminar una noticia
+      tags:
+        - Noticias
+      parameters:
+        - name: id
+          in: path
+          description: id para eliminar una noticia
+          required: true
+          type: string
+      responses:
+        "200":
+          description: noticias eliminada correctamente
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+        "401":
+          description: Error por el usuario no esta autenticado
+        "500":
+          description: Error generado en el servidor
+
+
+components:
+  schemas:
+    New:
+      type: object
+      properties:
+        _id:
+          type: ObjectId
+          description: id autogenerado por mongoDB
+        titulo:
+          type: string
+          description: titulo de la noticia
+        descripcion:
+          type: string
+          description: descripción de la noticia
+        autor:
+          type: string
+          description: creador de la noticia
+        imagen:
+          type: string
+          description: imagen de la noticia
+      example:
+        _id: ObjectId("kjsahdjas18972jhas89213")
+        titulo: nuevas formas de invertir
+        descripcion: noticia de inversion en la bolsa
+        autor: fredy
+        imagen: http://imagenes.com/noticia1.jpg
+  requestBodies:
+    objectNew:
+      type: object
+      properties:
+        titulo:
+          type: string
+          description: titulo de la noticia
+        descripcion:
+          type: string
+          description: descripción de la noticia
+        autor:
+          type: string
+          description: creador de la noticia
+        imagen:
+          type: string
+          description: imagen de la noticia
+      example:
+        titulo: noticia de test
+        descripcion: descripcion de prueba
+        autor: fredy
+        imagen: http://imagenes.com/noticiaTest.jpg
