@@ -1,0 +1,1 @@
+await Deno.writeTextFile("products.json",'[{"name":"camisa", "price":200}]');
